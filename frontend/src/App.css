@@ -1,0 +1,331 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Space between buttons */
+}
+
+.btn-primary {
+  background-color: #a9df80;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #86b049;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="month"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.auth-form-container, .form-card {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form button, .expense-form button, .budget-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-form-container p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.no-data, .loading {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Header/Navbar */
+.header {
+  background-color: #86b049;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul li {
+  margin-left: 20px;
+}
+
+.header nav ul li a, .header nav ul li button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background: none; /* For button */
+  border: none; /* For button */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.header nav ul li a:hover, .header nav ul li button:hover {
+  background-color: #5e8b40;
+}
+
+/* Dashboard */
+.dashboard-page {
+    padding: 20px;
+}
+
+.dashboard-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.dashboard-summary .card {
+    text-align: center;
+}
+
+.total-spend-card p {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #28a745; /* Green for positive, maybe red for over budget */
+    margin: 10px 0;
+}
+
+.top-expenses-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.top-expenses-card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.top-expenses-card li:last-child {
+    border-bottom: none;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.chart-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center; /* Center charts */
+    align-items: center;
+    min-height: 350px; /* Ensure charts have space */
+}
+
+/* Expenses */
+.expense-list-container, .budget-list-container {
+    margin-top: 40px;
+}
+
+.expense-list, .budget-list {
+    list-style: none;
+    padding: 0;
+}
+
+.expense-item, .budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-left: 5px solid #86b040; /* Accent border */
+}
+
+.expense-details, .budget-details {
+    flex-grow: 1;
+}
+
+.expense-category, .budget-category {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #2c3e50;
+    margin-right: 15px;
+}
+
+.expense-amount {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #dc3545; /* Red for expenses */
+    margin-right: 10px;
+}
+
+.expense-date {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.expense-notes {
+    font-style: italic;
+    color: #777;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.expense-actions, .budget-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Budget Specifics */
+.budget-amounts p {
+    margin: 5px 0;
+    font-size: 0.95em;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden; /* Ensure progress bar stays within bounds */
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* Will be set dynamically by JS */
+    background-color: #28a745; /* Green */
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.budget-item.status-yellow .progress-bar {
+    background-color: #ffc107; /* Yellow */
+}
+
+.budget-item.status-red .progress-bar {
+    background-color: #dc3545; /* Red */
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(255,255,255,0.7);
+}
+
+
+  

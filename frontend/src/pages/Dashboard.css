@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --main-bg: #F9FAFB;
+    --card-bg: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --accent-blue: #4F46E5;
+    --accent-light-blue: #E0E7FF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--main-bg);
+}
+
+.dashboard-page {
+    padding: 24px 48px;
+}
+
+/* --- Header --- */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.header-controls {
+    display: flex;
+    gap: 16px;
+}
+
+/* --- Grid Layout --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.right-column-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.chart-container,
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.chart-container h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* --- Stat Cards --- */
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.stat-card.blue-bg {
+    background-color: var(--accent-light-blue);
+}
+.stat-card h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 0 0 7px 0;
+}
+.stat-card p {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* --- Doughnut Chart Specifics --- */
+.doughnut-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 24px auto;
+}
+.doughnut-center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.doughnut-center-text strong {
+    font-size: 20px;
+    display: block;
+}
+.doughnut-center-text span {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.doughnut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* --- Top Spending Categories List --- */
+.top-categories-list {
+    margin-top: 32px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 24px;
+}
+
+.top-categories-list h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.top-categories-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.top-categories-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.category-name {
+    color: var(--text-secondary);
+}
+
+.category-amount {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* --- NEW STYLES FOR DATE PICKER --- */
+.date-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #FFF;
+    padding: 4px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+}
+
+.date-picker-separator {
+    color: var(--text-secondary);
+}
+
+.date-input {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 4px;
+    border: none;
+    border-radius: 4px;
+    width: 100px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+.date-input:focus {
+    outline: none;
+}
+
+
+
+/* In components/Dashboard.css */
+
+/* =================================================================
+   Responsive Styles
+================================================================= */
+
+/* For Tablets (screens smaller than 1024px) */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        /* Switch from a two-column grid to a single column */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For Mobile Phones (screens smaller than 768px) */
+@media (max-width: 768px) {
+    .dashboard-page {
+        /* Reduce padding on the sides for more space */
+        padding: 16px;
+    }
+
+    .dashboard-header {
+        /* Stack the header title and controls on mobile */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+
+    .chart-container, .stat-card {
+        padding: 16px;
+    }
+}

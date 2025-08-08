@@ -1,0 +1,147 @@
+.expenses-page {
+    padding: 24px 48px;
+    font-family: 'Inter', sans-serif;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #4F46E5;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-primary:hover {
+    background-color: #4338CA;
+}
+
+/* Table Styles */
+.table-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+thead th {
+    background-color: #f9fafb;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon {
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    background-color: #6c757d;
+    border-radius: 5px;
+}
+.btn-icon.btn-danger {
+    border: none;
+    color: white;
+    background-color: #ee1111;
+    border-radius: 5px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content .form-group {
+    margin-bottom: 16px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.modal-content input, .modal-content select, .modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}

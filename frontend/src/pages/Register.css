@@ -1,0 +1,156 @@
+/* Register.css */
+
+/* Main container to center the panel on the page */
+.register-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif; /* A nice, clean sans-serif font */
+}
+
+/* The main two-column panel */
+.register-panel {
+    display: flex;
+    width: 900px;
+    height: 650px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures child elements conform to border-radius */
+}
+
+/* Left side of the panel containing the form */
+.register-form-section {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-content {
+    width: 100%;
+    max-width: 350px;
+}
+
+.form-header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.form-header h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.form-header p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Google Button */
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* "or" separator */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.separator span {
+    padding: 0 10px;
+}
+
+/* Form styling */
+.auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Important for padding and width calculation */
+}
+
+/* Register button */
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #34d399; /* Green color from image */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #2cb782;
+}
+
+.error-message {
+    color: #e53e3e;
+    background-color: #fed7d7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #34d399;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Right side of the panel with the visual */
+.register-visual-section {
+    flex-basis: 50%;
+    background-image: url('/src/assets/images/expense.png'); 
+    background-size: 170%;
+    background-position: 75% 50%;
+}
